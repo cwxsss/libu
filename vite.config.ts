@@ -9,19 +9,8 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "",
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        format: "iife",
-      },
-    },
+    rollupOptions: { output: { format: "iife" } },
   },
-  resolve: {
-    alias: {
-      "@": "/src",
-    },
-  },
-  server: {
-    port: 3000,
-    open: false,
-  },
+  resolve: { alias: { "@": "/src" } },
 });
+
