@@ -5,6 +5,10 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "react-jsx",
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true

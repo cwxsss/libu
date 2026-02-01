@@ -480,7 +480,11 @@ export default function MainPage() {
         {/* 详情弹窗 */}
         <GiftDetailModal
           isOpen={showDetailModal}
-          gift={selectedGift}
+          gift={
+            selectedGift && selectedGift.data
+              ? (selectedGift as { record: { id: string }; data: GiftData })
+              : null
+          }
           onClose={closeDetailModal}
           onEdit={saveEdit}
           onDelete={deleteGift}
@@ -506,7 +510,7 @@ export default function MainPage() {
           sortOrder={sortOrder}
           setSortOrder={setSortOrder}
           filteredCount={modalFilteredGifts.length}
-          totalCount={allValidGifts.length}
+          totalCount={validGifts.length}
           theme={state.currentEvent.theme}
           filteredGifts={modalFilteredGifts}
         />

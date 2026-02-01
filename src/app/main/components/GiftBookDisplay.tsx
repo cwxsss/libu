@@ -1,12 +1,9 @@
 import { amountToChinese } from '@/utils/format';
+import { GiftData } from '@/types';
 
 interface Gift {
   record: { id: string };
-  data: {
-    name: string;
-    amount: number;
-    abolished?: boolean;
-  } | null;
+  data: GiftData | null;
 }
 
 interface GiftBookDisplayProps {
